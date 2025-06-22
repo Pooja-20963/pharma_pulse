@@ -1,0 +1,122 @@
+/* General Styling */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F0F8F1;
+    /* Light Greenish Background */
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+/* Header */
+
+header {
+    background: linear-gradient(to right, #00FFFF, #42878f, #4169E1);
+    /* Dark Blue */
+    color: white;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+/* Container */
+
+.container {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    margin: 30px auto;
+    border: 2px solid #0D47A1;
+}
+
+
+/* Image Styling */
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.images img {
+    width: 30%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+    /* Zoom effect on hover */
+}
+
+
+/* List Styling */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #0D47A1;
+}
+
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Applying Animations */
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1.5s ease-in-out;
+}
+
+.zoom-in {
+    animation: zoomIn 1.5s ease-in-out;
+}

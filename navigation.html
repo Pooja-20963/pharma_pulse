@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Homepage</title>
+    <style>
+        /* General Styling */
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF;
+        }
+        /* Header Section */
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #00FFFF, #42878f, #4169E1);
+            padding: 15px 30px;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        /* Navigation Menu */
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #FFFFFF;
+            color: #0D47A1;
+            border-radius: 5px;
+        }
+        /* Image Slider with Overlay */
+        
+        .slider-container {
+            position: relative;
+            width: 100vw;
+            height: 500px;
+            overflow: hidden;
+        }
+        
+        .slider img {
+            width: 100vw;
+            height: 500px;
+            object-fit: cover;
+            display: none;
+        }
+        
+        .slider img.active {
+            display: block;
+        }
+        /* Black Transparent Overlay */
+        
+        .slider-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Slogan Styling */
+        
+        .slogan {
+            color: #FFD700;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Arial Black", sans-serif;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        }
+        /* Information Sections */
+        
+        .info-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            gap: 20px;
+        }
+        
+        .info-box {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .info-box h3 {
+            color: #007bff;
+        }
+        /* Popup Styling */
+        
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .popup-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* Close Button (Cross) */
+        
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            color: red;
+        }
+        /* Button Styling */
+        
+        .login-btn {
+            width: 80%;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            background: #007bff;
+            /* Blue color */
+            color: white;
+            margin: 10px 0;
+        }
+        
+        .login-btn:hover {
+            background: #0056b3;
+            /* Darker blue on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="pharma_logo.webp" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="navigation.html">Home</a></li>
+                <li><a href="info.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" onclick="openPopup()">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Image Slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="image1.jpg" alt="Image 1" class="active">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+            <img src="image4.jpg" alt="Image 4">
+        </div>
+        <!-- Black Transparent Overlay with Slogan -->
+        <div class="slider-overlay">
+            <div class="slogan">"Your Trusted Partner in Health & Wellness"</div>
+        </div>
+    </div>
+
+    <!-- Information Sections -->
+    <div class="info-container">
+        <div class="info-box">
+            <h3>About Our Company</h3>
+            <p>We are dedicated to selling high-quality medicines. We do not manufacture medicines but ensure a reliable supply for customers.</p>
+        </div>
+        <div class="info-box">
+            <h3>About Medicines</h3>
+            <p>We offer a wide range of certified and trusted medicines to help individuals lead healthier lives.</p>
+        </div>
+        <div class="info-box">
+            <h3>Our Goals</h3>
+            <p>Our mission is to provide accessible and affordable medicines to everyone while maintaining high standards of safety and quality.</p>
+        </div>
+    </div>
+
+    <!-- Login Popup -->
+    <div class="popup-overlay" id="loginPopup">
+        <div class="popup-box">
+            <span class="close-btn" onclick="closePopup()">×</span>
+            <button class="login-btn" onclick="location.href='admin_login.php'">Admin</button>
+            <button class="login-btn" onclick="location.href='login.php'">User</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function openPopup() {
+            document.getElementById("loginPopup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("loginPopup").style.display = "none";
+        }
+
+        let index = 0;
+        const images = document.querySelectorAll(".slider img");
+        const totalImages = images.length;
+
+        function showSlide(i) {
+            images.forEach(img => img.classList.remove("active"));
+            images[i].classList.add("active");
+        }
+
+        function nextSlide() {
+            index = (index + 1) % totalImages;
+            showSlide(index);
+        }
+
+        setInterval(nextSlide, 3000);
+    </script>
+</body>
+
+</html>

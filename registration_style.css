@@ -1,0 +1,80 @@
+/* General Styling */
+
+body {
+    background-color: #E3F2FD;
+    /* Light Blue */
+    font-family: Arial, sans-serif;
+    color: black;
+    /* Dark Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* Container Box */
+
+.container {
+    background: #ffffff;
+    /* White */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+
+/* Form Title */
+
+h2 {
+    margin-bottom: 15px;
+    color: black;
+}
+
+
+/* Form Groups */
+
+.form-group {
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+
+/* Labels */
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+/* Input Fields */
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* Submit Button */
+
+button {
+    background: #0D47A1;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #1565C0;
+}

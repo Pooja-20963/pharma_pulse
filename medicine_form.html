@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Entry Form</title>
+    <link rel="stylesheet" href="/Styles/medicine_form.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Medicine Entry Form</h2>
+        <form action="submit-medicine.php" method="POST">
+            <label for="medicine-id">Medicine ID:</label>
+            <input type="text" id="medicine-id" name="medicine-id" required>
+
+            <label for="medicine-name">Medicine Name:</label>
+            <input type="text" id="medicine-name" name="medicine-name" required>
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" placeholder="Enter category (e.g., Antibiotic, Pain Reliever)" required>
+
+            <label for="special-ingredient">Special Ingredient:</label>
+            <input type="text" id="special-ingredient" name="special-ingredient" required>
+
+            <label for="key-features">Key Features (Enter 2 features, comma separated):</label>
+            <input type="text" id="key-features" name="key-features" required>
+
+            <label for="purpose">Purpose (e.g., Fever, Mild Pain, Allergy):</label>
+            <input type="text" id="purpose" name="purpose" required>
+
+            <label for="price">Price (₹):</label>
+            <input type="number" id="price" name="price" step="0.01" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

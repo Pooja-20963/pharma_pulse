@@ -1,0 +1,79 @@
+/* General Styling */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url('image10.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+
+/* Blurred Background Effect */
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    /* Light overlay */
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    z-index: -1;
+}
+
+
+/* Header */
+
+header {
+    background: linear-gradient(to right, #00FFFF, #42878f, #4169E1);
+    color: white;
+    padding: 20px;
+}
+
+
+/* Contact Container */
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin: 50px auto;
+    border: 2px solid #0D47A1;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Contact Info */
+
+.contact-info {
+    text-align: left;
+    margin-top: 20px;
+}
+
+h2,
+h3 {
+    color: #0D47A1;
+}
+
+
+/* Links */
+
+a {
+    color: #0D47A1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
